@@ -16,7 +16,7 @@ sleep 1
 # set vars
 if [ ! $IP_SERVER ]; then
 read -p "Input IP Server Kamu: " IP_SERVER
-echo 'export IP_SERVER='\"${IP_SERVER}\" >> $HOME/.bash_profile
+echo 'export IP_SERVER=165.22.242.14'\"${IP_SERVER}\" >> $HOME/.bash_profile
 read -p "Input Password Kamu: " PASSWORD
 echo 'export PASSWORD='\"${PASSWORD}\" >> $HOME/.bash_profile
 fi
