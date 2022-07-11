@@ -7,20 +7,20 @@ PASSWORDKU=$PASSWORD
 while true
 do
 cd $HOME/massa/massa-client
-active_rolls=$( wallet_info -p $PASSWORDKU | grep "Active rolls" | awk '{ print $3 }')
+active_rolls=$(wallet_info -p $PASSWORDKU | grep "Active rolls" | awk '{ print $3 }')
 int_rolls=${active_rolls}
 
 # update
 
-final_balance=$( wallet_info -p $PASSWORDKU | grep "Final balance" | awk '{ print $3 }')
+final_balance=$(wallet_info -p $PASSWORDKU | grep "Final balance" | awk '{ print $3 }')
 int_final_balance=${final_balance}
-candidate_balance=$( wallet_info -p $PASSWORDKU | grep "Candidate balance" | awk '{ print $3 }')
+candidate_balance=$(wallet_info -p $PASSWORDKU | grep "Candidate balance" | awk '{ print $3 }')
 int_candidate_balance=${candidate_balance}
-locked_balance=$( wallet_info -p $PASSWORDKU | grep "Locked balance" | awk '{ print $3 }')
+locked_balance=$(wallet_info -p $PASSWORDKU | grep "Locked balance" | awk '{ print $3 }')
 int_locked_balance=${locked_balance}
-final_rolls=$( wallet_info -p $PASSWORDKU | grep "Final rolls" | awk '{ print $3 }')
+final_rolls=$(wallet_info -p $PASSWORDKU | grep "Final rolls" | awk '{ print $3 }')
 int_final_rolls=${final_rolls}
-candidate_rolls=$( wallet_info -p $PASSWORDKU | grep "Candidate rolls" | awk '{ print $3 }')
+candidate_rolls=$(wallet_info -p $PASSWORDKU | grep "Candidate rolls" | awk '{ print $3 }')
 int_candidate_rolls=${candidate_rolls}
 AKTIF=" ✅ NODE: $ADDRESS Aktif "\==" Final balance: $int_final_balance "\==" Candidate balance: $int_candidate_balance "\==" Locked balance: $int_locked_balance "\==" Active rolls: $int_rolls "\==" Final rolls: $int_final_rolls "\==" Candidate rolls: $int_candidate_rolls"
 TIDAK=" ❌ NODE: $ADDRESS Tidak Aktif "\==" Final balance: $int_final_balance "\==" Candidate balance: $int_candidate_balance "\==" Locked balance: $int_locked_balance "\==" Active rolls: $int_rolls "\==" Final rolls: $int_final_rolls "\==" Candidate rolls: $int_candidate_rolls"
